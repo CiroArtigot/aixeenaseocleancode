@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3" type="plugin" group="system">
+	<name>Aixeena SEO - Clean Code</name>
+	<author>Ciro Artigot</author>
+	<creationDate>May 2018</creationDate>
+	<copyright>Copyright (C) 2018 Ciro Artigot. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>info@aixeena.org</authorEmail>
+	<authorUrl>www.aixeena.org</authorUrl>
+	<version>1.0.0</version>
+	<description>
+	<![CDATA[<div style="background-color:#f2f2f2; padding:20px; margin:20px; border-radius:10px;">
+	<p><strong>Aixeena SEO Clean Code</strong> it is a plugin to clean the Joomla sites HTML code.
+	With this plugin you can get better results in the performance of your website, compressing the HTML code, disabling core Joomla innecesary scripts and metas.</p>
+	<div style="clear:both"></div></div>]]>
+	</description>
+	
+	<files>
+		<filename plugin="aixeenaseocleancode">aixeenaseocleancode.php</filename>
+		<filename>index.html</filename>
+		<folder>classes</folder>
+	</files>
+	
+	 <updateservers>
+        <server type="extension" priority="2" name="Aixeena updates">
+				http://aixeena.org/updates/aixeena_seo/aixeenaseocleancode.xml
+        </server>
+    </updateservers>
+
+	<config>
+	
+	
+	
+	<fields name="params">
+		<fieldset name="basic">
+			<field name="meta_generator" type="radio"
+						class="btn-group" default="1" description="" label="Hide meta name generator">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			<field name="base_href" type="radio"
+						class="btn-group" default="1" description="" label="Hide base href">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			
+			<field name="disabler" type="radio"
+						class="btn-group" default="0" description="" label="Disable JS and CSS links">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			
+			<field
+				name="scriptsarray"
+				type="textarea"
+				default=""
+				label="Js Scripts to disable"
+				description="JS scripts to remove from page heading (separated by ENTER) for example /media/system/js/caption.js'"
+				rows="15"
+				cols="30"
+			/>
+			
+			<field
+				name="scriptsarray2"
+				type="textarea"
+				default=""
+				label="Scripts codes to disable"
+				description="Scripts codes to remove from page heading (keys separated by ENTER) for example JTooltips to remove any code with JTooltips' inside."
+				rows="10"
+				cols="30"
+			/>
+			
+			<field
+				name="cssarray"
+				type="textarea"
+				default=""
+				label="CSS Style Sheets to disable"
+				description="CSS Style Sheets to remove from page heading (separated by  ENTER) for example /media/system/css/modal.css"
+				rows="15"
+				cols="30"
+			/>
+			
+			<field name="clean" type="radio"
+						class="btn-group" default="1" description="" label="Use Clean PHP Function">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			
+			<field name="sanitize" type="radio"
+						class="btn-group" default="1" description="" label="Compress HTML">
+				<option value="0">JNo</option>
+				<option value="1">JYes</option>
+			</field>
+			
+		</fieldset>
+	</fields>	
+	</config>
+</extension>
